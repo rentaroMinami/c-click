@@ -1,0 +1,10 @@
+#cookie-icon {
+  width : 300px;
+}
+#cookie-icon:hover {
+  width : 305px;
+}
+
+#cookie-icon:active{
+  width : 295px;  
+}
