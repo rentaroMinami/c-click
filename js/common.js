@@ -6,7 +6,10 @@ let lastClickTime = "";
 
 function getFormattedDateStr(){
     let dateNow = new Date;
-    lastClickTime = `${dateNow.getFullYear()}年${dateNow.getMonth()}月${dateNow.getDate()}日${dateNow.getHours()}時${dateNow.getMinutes()}分${dateNow.getSeconds()}秒`;
+    lastClickTime = `\
+        ${dateNow.getFullYear()}年${dateNow.getMonth()}月${dateNow.getDate()}日\
+        ${dateNow.getHours()}時${dateNow.getMinutes()}分${dateNow.getSeconds()}秒\
+        `;
     return lastClickTime;
 }
 
