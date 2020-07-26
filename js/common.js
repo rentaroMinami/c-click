@@ -24,16 +24,19 @@ function hasTheThree(inputNumber) {
 function isNabeatsuNumber(inputNumber) {
     return isMultipleOfThree(inputNumber) || hasTheThree(inputNumber);
 };
+function changeBackgroundIfNabeatsuNumber(inputNumber, inputElement) {
+    if(isNabeatsuNumber(inputNumber)){
+        inputElement.style.backgroundImage = "url(../image/nabeatsu.png)";
+    } else {
+        inputElement.style.backgroundImage = "none";
+    };
+}
 
 COOKIE_ICON.addEventListener("click", () => {
     clickCount++;
     CLICK_COUNT_INDICATER.innerHTML = clickCount;
 
     LAST_CLICK_TIME_INDICATER.innerHTML = getFormattedDateStr();
-    console.log(isNabeatsuNumber(clickCount));
-    if(isNabeatsuNumber(clickCount)){
-        COOKIE_BACKGROUND.style.backgroundImage = "url(../image/nabeatsu.png)";
-    } else {
-        COOKIE_BACKGROUND.style.backgroundImage = "none";
-    };
+    
+    changeBackgroundIfNabeatsuNumber(clickCount, COOKIE_BACKGROUND);
 });
