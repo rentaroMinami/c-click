@@ -5,7 +5,10 @@
 #cookie-icon:hover {
   width : 305px;
 }
-
 #cookie-icon:active{
   width : 295px;
+}
+
+#cookie-bg{
+  background-image: none;
 }
